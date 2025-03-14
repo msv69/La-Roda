@@ -1,0 +1,7 @@
+[build]
+  command = "npm install && npx eleventy"
+  publish = "_site"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
