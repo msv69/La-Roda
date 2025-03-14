@@ -1,4 +1,4 @@
 # La-Roda
-La Rüda
+La Röda
 
-Sito dell'associazione ciclistica La Rüda
+Sito dell'associazione ciclistica La Röda
