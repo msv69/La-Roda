@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tuo-username/sito-ciclismo
+  repo: msv69/La-Roda
 
 media_folder: "src/images"
 public_folder: "/images"
