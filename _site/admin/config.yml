@@ -8,7 +8,7 @@ public_folder: "/images"
 collections:
   - name: "ciclisti"
     label: "Ciclisti"
-    folder: "src/_data/ciclisti"
+    folder: "src/data/ciclisti"
     create: true
     fields:
       - {label: "Nome", name: "nome", widget: "string"}
@@ -16,3 +16,6 @@ collections:
       - {label: "Foto", name: "foto", widget: "image"}
       - {label: "Biografia", name: "bio", widget: "text"}
       - {label: "Palmares", name: "palmares", widget: "list"}
+      - {label: "Data di Nascita", name: "data_nascita", widget: "datetime"}
+      - {label: "Specialità", name: "specialita", widget: "select", options: ["Strada", "MTB", "Ciclocross"]}
+      - {label: "Sponsor", name: "sponsor", widget: "list", fields: [{label: "Nome Sponsor", name: "nome", widget: "string"}]}

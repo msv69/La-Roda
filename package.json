@@ -2,7 +2,8 @@
     "name": "la-roda",
     "version": "1.0.0",
     "scripts": {
-        "build": "eleventy"
+        "build": "eleventy",
+        "build:images": "node ./src/_data/galleria.js"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1"
@@ -27,4 +28,6 @@
     "dependencies": {
         "@11ty/eleventy-img": "^6.0.1"
     }
+
 }
+

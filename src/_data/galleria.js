@@ -1,13 +1,19 @@
 const Image = require("@11ty/eleventy-img");
 
 module.exports = async function() {
-  let images = await Image("./src/images/galleria/*.{jpg,png}", {
-    formats: ["webp"],
-    outputDir: "./_site/images/"
-  });
+  try {
+    const images = await Image("./src/images/galleria/*.{jpg,png}", {
+      formats: ["webp"],
+      outputDir: "./_site/images/",
+      filenameFormat: (id, src, width, format) => {
+        const originalName = src.split('/').pop().split('.')[0];
+        return `${originalName}-${width}w.${format}`;
+      }
+    });
 
-  return Object.values(images).map(img => ({
-    url: img.webp[0].url,
-    desc: img.webp[0].sourcePath.split('/').pop().replace(/-/g, ' ')
-  }));
+    return Object.values(images).flatMap(format => format);
+  } catch (error) {
+    console.error("Errore nel processing immagini:", error);
+    return [];
+  }
 };
