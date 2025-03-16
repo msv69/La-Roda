@@ -8,7 +8,7 @@ public_folder: "/images"
 collections:
   - name: "ciclisti"
     label: "Ciclisti"
-    folder: "src/_data/ciclisti"
+    folder: "src/data/ciclisti"
     create: true
     fields:
       - {label: "Nome", name: "nome", widget: "string"}
