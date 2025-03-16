@@ -1,0 +1,19 @@
+html
+Copy
+<div class="galleria">
+  {% for foto in galleria %}
+    <a href="{{ foto.foto }}" class="lightbox">
+      <img src="{{ foto.foto }}" alt="{{ foto.descrizione }}">
+    </a>
+  {% endfor %}
+</div>
+
+<script>
+  // Lightbox con SimpleLightbox
+  document.addEventListener('DOMContentLoaded', function(){
+    new SimpleLightbox('.galleria a', {
+      captionsData: 'alt',
+      captionDelay: 250
+    });
+  });
+</script>

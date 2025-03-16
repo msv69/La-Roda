@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="ciclista">
+  <h2>{{ ciclista.nome }} {{ ciclista.cognome }}</h2>
+  <img src="{{ ciclista.foto }}" alt="{{ ciclista.nome }}">
+  <div class="bio">
+    {{ ciclista.bio | safe }}
+  </div>
+  <h3>Palmarès</h3>
+  <ul>
+    {% for risultato in ciclista.palmares %}
+      <li>{{ risultato }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
