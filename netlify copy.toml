@@ -1,6 +1,9 @@
 [build]
-  command = "npm install && npx eleventy"
+  command = "pm install && npm run build"
   publish = "_site"
+
+ npm install && npm run build
+ npm install && npm run build
 
 [[redirects]]
   from = "/admin/*"
