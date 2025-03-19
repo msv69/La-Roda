@@ -6,9 +6,9 @@ module.exports = function(eleventyConfig) {
     return {
       dir: {
         input: "src",
-        includes: "includes",  // <-- Importante!
+        includes: "_includes",  // <-- Importante!
         output: "_site"
-      }
+      },
+      templateFormats: ["njk", "md", "html"]
     };
   };
-
