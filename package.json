@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "build": "eleventy",
+        "clean": "rm -rf _site node_modules",
         "build:images": "node ./src/_data/galleria.js"
     },
     "devDependencies": {

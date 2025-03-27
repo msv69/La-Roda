@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npx eleventy"
+  command = "npm ci && npm run build"
   publish = "_site"
 
 
