@@ -4,10 +4,11 @@
     "scripts": {
         "build": "eleventy",
         "clean": "rm -rf _site node_modules",
-        "build:images": "node ./src/_data/galleria.js"
+        "build:images": "node ./src/_data/galleria.js",
+        "build:debug": "eleventy --dryrun --verbose"
     },
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.1"
+        "@11ty/eleventy": "^3.0.0"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -33,3 +34,4 @@
         "sharp": "^0.33.5"
     }
 }
+

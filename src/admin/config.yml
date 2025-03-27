@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: msv69/la-roda
+  repo: msv69/La-Roda
 
 media_folder: "src/images/galleria"
 public_folder: "/images/galleria"
