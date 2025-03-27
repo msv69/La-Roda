@@ -1,21 +1,19 @@
 backend:
   name: github
-  repo: msv69/La-Roda
+  repo: msv69/la-roda
 
-media_folder: "src/images"
-public_folder: "/images"
+media_folder: "src/images/galleria"
+public_folder: "/images/galleria"
 
 collections:
   - name: "ciclisti"
     label: "Ciclisti"
-    folder: "src/data/ciclisti"
+    folder: "src/_data/ciclisti"
     create: true
     fields:
       - {label: "Nome", name: "nome", widget: "string"}
-      - {label: "Cognome", name: "cognome", widget: "string"}
       - {label: "Foto", name: "foto", widget: "image"}
-      - {label: "Biografia", name: "bio", widget: "text"}
       - {label: "Palmares", name: "palmares", widget: "list"}
-      - {label: "Data di Nascita", name: "data_nascita", widget: "datetime"}
-      - {label: "Specialità", name: "specialita", widget: "select", options: ["Strada", "MTB", "Ciclocross"]}
-      - {label: "Sponsor", name: "sponsor", widget: "list", fields: [{label: "Nome Sponsor", name: "nome", widget: "string"}]}
+
+
+   

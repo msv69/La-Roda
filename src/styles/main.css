@@ -1,0 +1,321 @@
+/* Reset e Variabili */
+:root {
+    --primary-color: #e74c3c; /* Rosso passione ciclismo */
+    --secondary-color: #2c3e50; /* Blu scuro */
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --spacing: 2rem;
+    --border-radius: 10px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Open Sans', system-ui, sans-serif;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+  }
+  
+  /* Header */
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('/images/hero-bg.jpg') center/cover;
+    color: var(--light-color);
+    padding: 4rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  /* Sezione Ciclisti */
+  .section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    color: var(--secondary-color);
+  }
+  
+  .ciclisti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+  }
+  
+  .ciclista-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .ciclista-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ciclista-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .ciclista-card h3 {
+    padding: 1.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .squadra {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0 1.5rem 1.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .palmares {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .palmares h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .palmares ul {
+    list-style: none;
+  }
+  
+  .palmares li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Galleria */
+  .glide__slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+  
+  .glide__arrows {
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  .glide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    border: none;
+    padding: 1rem 1.5rem;
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .glide__arrow--left {
+    left: 0;
+  }
+  
+  .glide__arrow--right {
+    right: 0;
+  }
+  
+  /* Newsletter */
+  #newsletter {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+  }
+  
+  #newsletter form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  #newsletter input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+  }
+  
+  #newsletter button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #newsletter button:hover {
+    background: #c0392b;
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .social-links img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-links a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    html {
+      font-size: 58%;
+    }
+  
+    .nav-links {
+      display: none; /* Da sostituire con menu hamburger */
+    }
+  
+    .hero-content h1 {
+      font-size: 3.5rem;
+    }
+  
+    .ciclisti-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .glide__slide img {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #newsletter form {
+      flex-direction: column;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  }
+  
+  /* Utility Classes */
+  .cta-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #c0392b;
+  }
+  
+  .dark-bg {
+    background: #f8f9fa;
+  }
+  
+  .admin-link {
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius);
+  }

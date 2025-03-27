@@ -12,3 +12,8 @@
  for = "/*"
  [headers.values]
    Access-Control-Allow-Origin = "*"
+
+
+[context.production.environment]
+  GATSBY_GIT_GATEWAY_API = "https://gitgateway.netlify.app/.netlify/identity"
+  NETLIFY_GIT_GATEWAY_ROLES = "admin"

@@ -1,14 +1,21 @@
+const Image = require("@11ty/eleventy-img");
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/images");
-    eleventyConfig.addPassthroughCopy("src/admin");
+  // Plugin Immagini
+  eleventyConfig.addPlugin(Image, {
+    formats: ["webp"],
+    urlPath: "/images/",
+    outputDir: "./_site/images/"
+  });
 
-
-    return {
-      dir: {
-        input: "src",
-        includes: "_includes",  // <-- Importante!
-        output: "_site"
-      },
-      templateFormats: ["njk", "md", "html"]
-    };
+  // Pass-through files
+  eleventyConfig.addPassthroughCopy("src/styles");
+  eleventyConfig.addPassthroughCopy("src/scripts");
+  
+  return {
+    dir: {
+      input: "src",
+      output: "_site"
+    }
   };
+};

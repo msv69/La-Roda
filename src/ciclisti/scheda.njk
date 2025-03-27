@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<article class="ciclista">
+  <img src="{{ foto }}" alt="{{ nome }}">
+  <h2>{{ nome }}</h2>
+  <div class="stats">
+    <p>Squadra: {{ squadra }}</p>
+    <h3>Palmares</h3>
+    <ul>
+      {% for evento in palmares %}
+      <li>{{ evento }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{% endblock %}
