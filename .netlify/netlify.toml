@@ -1,0 +1,38 @@
+headers = []
+redirects = []
+
+[dev]
+framework = "eleventy"
+command = "npm run start"
+targetPort = 8080.0
+port = 8888.0
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-lighthouse"
+
+[plugins.inputs]
+
+[build]
+publish = "C:\\Users\\milos\\OneDrive\\milo\\netifly\\La-Roda\\_site"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm install && npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
