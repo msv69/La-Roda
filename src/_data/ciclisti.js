@@ -1,4 +1,4 @@
-cconst Airtable = require('airtable');
+const Airtable = require('airtable');
 
 module.exports = async () => {
   const base = new Airtable({
