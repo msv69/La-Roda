@@ -1,6 +1,7 @@
 
 [build]
-  command = "npm install && npm run build"
+  command = "npm install and npm run build"
+
   publish = "_site"
 
 [build.environment]
